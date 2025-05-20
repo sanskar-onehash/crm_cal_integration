@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-22 10:32:07.754058",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "booking_trigger"
+ ],
+ "fields": [
+  {
+   "fieldname": "booking_trigger",
+   "fieldtype": "Link",
+   "label": "Booking Trigger",
+   "options": "Cal Booking Trigger"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-22 10:32:39.575034",
+ "modified_by": "Administrator",
+ "module": "Cal",
+ "name": "Cal Booking Events",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

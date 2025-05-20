@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-21 18:09:13.568575",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "for_doctype",
+  "allowed_reschedule",
+  "count_team_reschedule",
+  "count_user_reschedule",
+  "approver_role"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "for_doctype",
+   "fieldtype": "Link",
+   "label": "For DocType",
+   "mandatory_depends_on": "enabled",
+   "options": "DocType",
+   "unique": 1
+  },
+  {
+   "fieldname": "allowed_reschedule",
+   "fieldtype": "Int",
+   "label": "Allowed Reschedule"
+  },
+  {
+   "default": "1",
+   "fieldname": "count_team_reschedule",
+   "fieldtype": "Check",
+   "label": "Count Team Reschedule"
+  },
+  {
+   "default": "0",
+   "fieldname": "count_user_reschedule",
+   "fieldtype": "Check",
+   "label": "Count User Reschedule"
+  },
+  {
+   "fieldname": "approver_role",
+   "fieldtype": "Link",
+   "label": "Approver Role",
+   "mandatory_depends_on": "enabled",
+   "options": "Role"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-21 18:19:51.375535",
+ "modified_by": "Administrator",
+ "module": "Cal",
+ "name": "Cal Reschedule Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

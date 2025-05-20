@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-05-21 16:54:27.935124",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "link_type",
+  "linked_document",
+  "event_time",
+  "column_break_mczw",
+  "event_type",
+  "scheduled_with",
+  "booked_email",
+  "status"
+ ],
+ "fields": [
+  {
+   "default": "CAL-SC-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "CAL-SC-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "link_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Link Type",
+   "options": "DocType",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "linked_document",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Linked Document",
+   "options": "link_type",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_mczw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "event_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Event Type",
+   "options": "Cal Event Type",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "scheduled_with",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Scheduled With",
+   "options": "Email",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nBooked\nCancelled\nRe-Scheduled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "event_time",
+   "fieldtype": "Datetime",
+   "label": "Event Time",
+   "read_only": 1
+  },
+  {
+   "description": "If booked with different e-mail then \"Scheduled With\"",
+   "fieldname": "booked_email",
+   "fieldtype": "Data",
+   "label": "Booked Email",
+   "options": "Email"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-21 17:30:10.349589",
+ "modified_by": "Administrator",
+ "module": "Cal",
+ "name": "Cal Schedule",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
