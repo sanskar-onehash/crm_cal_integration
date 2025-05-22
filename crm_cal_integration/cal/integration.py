@@ -1,3 +1,4 @@
+import frappe
 import json
 
 from crm_cal_integration.cal import utils
@@ -13,3 +14,8 @@ def fetch_slots_available(event_type_id, start_time=None, end_time=None):
             f"/slots/available?eventTypeId={event_type_id}&startTime={start_time}&endTime={end_time}"
         ).text
     )
+
+
+@frappe.whitelist()
+def cal_webhook():
+    frappe.log_error("Cal Webhook Data", frappe.form_dict)
