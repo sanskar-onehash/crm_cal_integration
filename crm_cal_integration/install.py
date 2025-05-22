@@ -10,6 +10,10 @@ def add_event_triggers():
 
     for trigger in triggers:
         frappe.get_doc(
-            {"doctype": "Cal Booking Trigger", "trigger_name": trigger.upper()}
+            {
+                "doctype": "Cal Booking Trigger",
+                "trigger_id": trigger.upper().replace(" ", "_"),
+                "trigger_name": trigger,
+            }
         ).save()
     frappe.db.commit()

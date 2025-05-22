@@ -6,6 +6,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "booking_trigger_id",
   "booking_trigger",
   "event_time",
   "start_time",
@@ -16,11 +17,11 @@
  ],
  "fields": [
   {
+   "fetch_from": "booking_trigger_id.trigger_name",
    "fieldname": "booking_trigger",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Booking Trigger",
-   "options": "Cal Booking Trigger"
+   "label": "Booking Trigger"
   },
   {
    "fieldname": "event_time",
@@ -55,12 +56,18 @@
    "fieldname": "reschedule_reason",
    "fieldtype": "Text",
    "label": "Reschedule Reason"
+  },
+  {
+   "fieldname": "booking_trigger_id",
+   "fieldtype": "Link",
+   "label": "Booking Trigger Id",
+   "options": "Cal Booking Trigger"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-05-22 14:04:06.483201",
+ "modified": "2025-05-22 15:43:23.098162",
  "modified_by": "Administrator",
  "module": "Cal",
  "name": "Cal Booking Events",

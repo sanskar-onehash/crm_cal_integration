@@ -10,11 +10,13 @@
   "link_type",
   "linked_document",
   "event_time",
+  "status",
   "column_break_mczw",
   "event_type",
   "scheduled_with",
   "booked_email",
-  "status",
+  "booked_phone",
+  "booking_status",
   "quick_meeting_details_section",
   "location",
   "column_break_epvf",
@@ -41,8 +43,7 @@
    "in_list_view": 1,
    "label": "Link Type",
    "options": "DocType",
-   "reqd": 1,
-   "set_only_once": 1
+   "permlevel": 1
   },
   {
    "fieldname": "linked_document",
@@ -50,8 +51,7 @@
    "in_list_view": 1,
    "label": "Linked Document",
    "options": "link_type",
-   "reqd": 1,
-   "set_only_once": 1
+   "permlevel": 1
   },
   {
    "fieldname": "column_break_mczw",
@@ -74,14 +74,6 @@
    "options": "Email",
    "reqd": 1,
    "set_only_once": 1
-  },
-  {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Status",
-   "options": "\nBooked\nCancelled\nRe-Scheduled",
-   "read_only": 1
   },
   {
    "fieldname": "event_time",
@@ -144,11 +136,31 @@
    "label": "Meeting Attendees",
    "options": "Cal Meet Attendees",
    "read_only": 1
+  },
+  {
+   "fieldname": "booked_phone",
+   "fieldtype": "Data",
+   "label": "Booked Phone",
+   "options": "Phone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "booking_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Booking Status",
+   "options": "\nBooked\nCanceled\nRe-Scheduled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-22 14:12:13.114705",
+ "modified": "2025-05-22 14:58:42.101946",
  "modified_by": "Administrator",
  "module": "Cal",
  "name": "Cal Schedule",
