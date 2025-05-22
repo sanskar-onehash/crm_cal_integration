@@ -11,17 +11,25 @@
   "linked_document",
   "event_time",
   "status",
+  "rescheduled_count",
+  "allow_rescheduling",
+  "is_recurring",
   "column_break_mczw",
   "event_type",
   "scheduled_with",
-  "booked_email",
-  "booked_phone",
+  "booking_id",
+  "booking_uid",
+  "booking_email",
+  "booking_phone",
   "booking_status",
   "quick_meeting_details_section",
   "location",
+  "cancellation_reason",
   "column_break_epvf",
   "additional_notes",
   "reschedule_reason",
+  "section_break_lweg",
+  "user_responses",
   "section_break_miur",
   "meeting_attendees",
   "section_break_xiwf",
@@ -82,13 +90,6 @@
    "read_only": 1
   },
   {
-   "description": "If booked with different e-mail then \"Scheduled With\"",
-   "fieldname": "booked_email",
-   "fieldtype": "Data",
-   "label": "Booked Email",
-   "options": "Email"
-  },
-  {
    "fieldname": "quick_meeting_details_section",
    "fieldtype": "Section Break",
    "label": "Quick Meeting Details"
@@ -138,29 +139,84 @@
    "read_only": 1
   },
   {
-   "fieldname": "booked_phone",
-   "fieldtype": "Data",
-   "label": "Booked Phone",
-   "options": "Phone",
-   "read_only": 1
-  },
-  {
    "fieldname": "booking_status",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Booking Status",
-   "options": "\nBooked\nCanceled\nRe-Scheduled",
+   "options": "Cal Booking Trigger",
    "read_only": 1
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status"
+  },
+  {
+   "fieldname": "booking_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Booking Id"
+  },
+  {
+   "fieldname": "cancellation_reason",
+   "fieldtype": "Small Text",
+   "label": "Cancellation Reason",
+   "read_only": 1
+  },
+  {
+   "description": "If booked with different e-mail then \"Scheduled With\"",
+   "fieldname": "booking_email",
+   "fieldtype": "Data",
+   "label": "Booking Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "booking_phone",
+   "fieldtype": "Data",
+   "label": "Booking Phone",
+   "options": "Phone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rescheduled_count",
+   "fieldtype": "Int",
+   "label": "Rescheduled Count",
+   "read_only": 1
+  },
+  {
+   "default": "01",
+   "fieldname": "allow_rescheduling",
+   "fieldtype": "Check",
+   "label": "Allow Rescheduling",
+   "permlevel": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_recurring",
+   "fieldtype": "Check",
+   "label": "Is Recurring",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_lweg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "user_responses",
+   "fieldtype": "JSON",
+   "hidden": 1,
+   "label": "User Responses"
+  },
+  {
+   "fieldname": "booking_uid",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Booking Uid"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-22 14:58:42.101946",
+ "modified": "2025-05-23 16:14:46.479881",
  "modified_by": "Administrator",
  "module": "Cal",
  "name": "Cal Schedule",

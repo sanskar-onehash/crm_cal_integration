@@ -1,5 +1,6 @@
 import requests
 
+from frappe.utils import dateutils as dt
 from frappe.utils.password import get_decrypted_password
 from crm_cal_integration.cal.config import API_URL
 
@@ -18,3 +19,7 @@ def get_header():
 
 def get(route="/"):
     return requests.get(get_api_url(route), headers=get_header())
+
+
+def normalize_datetime(datetime_str):
+    return dt.get_datetime(datetime_str).replace(tzinfo=None)

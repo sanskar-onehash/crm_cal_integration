@@ -8,12 +8,19 @@
  "field_order": [
   "booking_trigger_id",
   "booking_trigger",
+  "booking_email",
+  "booked_phone",
+  "booking_id",
+  "location",
+  "column_break_xaxz",
   "event_time",
   "start_time",
   "end_time",
-  "location",
   "additional_notes",
-  "reschedule_reason"
+  "section_break_qewv",
+  "reschedule_reason",
+  "column_break_wxre",
+  "cancellation_reason"
  ],
  "fields": [
   {
@@ -50,6 +57,7 @@
   {
    "fieldname": "additional_notes",
    "fieldtype": "Text",
+   "in_list_view": 1,
    "label": "Additional Notes"
   },
   {
@@ -62,12 +70,46 @@
    "fieldtype": "Link",
    "label": "Booking Trigger Id",
    "options": "Cal Booking Trigger"
+  },
+  {
+   "fieldname": "booking_email",
+   "fieldtype": "Data",
+   "label": "Booking Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "booking_id",
+   "fieldtype": "Data",
+   "label": "Booking Id"
+  },
+  {
+   "fieldname": "column_break_xaxz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_qewv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_wxre",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "booked_phone",
+   "fieldtype": "Data",
+   "label": "Booked Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "cancellation_reason",
+   "fieldtype": "Text",
+   "label": "Cancellation Reason"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-05-22 15:43:23.098162",
+ "modified": "2025-05-23 15:06:40.325050",
  "modified_by": "Administrator",
  "module": "Cal",
  "name": "Cal Booking Events",

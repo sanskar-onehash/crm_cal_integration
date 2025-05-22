@@ -29,7 +29,7 @@ def fetch_cal_slots_available(event_type_id, start_time=None, end_time=None):
     slots_availble_res = cal.fetch_slots_available(event_type_id, start_time, end_time)
     status = slots_availble_res.get("status")
     if status == "success":
-        data = slots_availble_res.get("slots")
+        data = slots_availble_res.get("data").get("slots")
         return {
             "status": status,
             "message": "Cal available slots fetched successfully.",
@@ -62,11 +62,11 @@ def add_update_cal_event_types(event_types):
             )
 
         if frappe.db.exists("Cal Event Type", event_type.get("id")):
-            doc = frappe.get_doc("Cal Event Type", event_type.get("id"))
-            doc.update(updates)
+            frappe.db.set_value(
+                "Cal Event Type", event_type.get("id"), updates, update_modified=True
+            )
         else:
             updates["id"] = event_type.get("id")
-            doc = frappe.new_doc(doctype="Cal Event Type", **updates)
-        doc.save()
+            frappe.new_doc("Cal Event Type", **updates).insert(ignore_permissions=True)
 
         frappe.db.commit()
