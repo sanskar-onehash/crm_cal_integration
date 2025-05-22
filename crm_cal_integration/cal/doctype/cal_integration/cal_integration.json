@@ -5,19 +5,31 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "api_key"
+  "api_key",
+  "column_break_whvr",
+  "secret_key"
  ],
  "fields": [
   {
    "fieldname": "api_key",
    "fieldtype": "Password",
    "label": "API Key"
+  },
+  {
+   "fieldname": "column_break_whvr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "secret_key",
+   "fieldtype": "Data",
+   "label": "Secret Key",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-05-20 15:23:27.432912",
+ "modified": "2025-05-22 11:52:41.816300",
  "modified_by": "Administrator",
  "module": "Cal",
  "name": "Cal Integration",

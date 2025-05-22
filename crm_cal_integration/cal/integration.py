@@ -16,6 +16,6 @@ def fetch_slots_available(event_type_id, start_time=None, end_time=None):
     )
 
 
-@frappe.whitelist()
+@frappe.whitelist(allow_guest=True)
 def cal_webhook():
     frappe.log_error("Cal Webhook Data", frappe.form_dict)
