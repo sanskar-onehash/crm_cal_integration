@@ -14,7 +14,16 @@
   "event_type",
   "scheduled_with",
   "booked_email",
-  "status"
+  "status",
+  "quick_meeting_details_section",
+  "location",
+  "column_break_epvf",
+  "additional_notes",
+  "reschedule_reason",
+  "section_break_miur",
+  "meeting_attendees",
+  "section_break_xiwf",
+  "event_timeline"
  ],
  "fields": [
   {
@@ -86,11 +95,60 @@
    "fieldtype": "Data",
    "label": "Booked Email",
    "options": "Email"
+  },
+  {
+   "fieldname": "quick_meeting_details_section",
+   "fieldtype": "Section Break",
+   "label": "Quick Meeting Details"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Small Text",
+   "label": "Location",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_epvf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "additional_notes",
+   "fieldtype": "Small Text",
+   "label": "Additional Notes",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reschedule_reason",
+   "fieldtype": "Small Text",
+   "label": "Reschedule Reason",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_xiwf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "event_timeline",
+   "fieldtype": "Table",
+   "label": "Event Timeline",
+   "options": "Cal Booking Events",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_miur",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "meeting_attendees",
+   "fieldtype": "Table",
+   "label": "Meeting Attendees",
+   "options": "Cal Meet Attendees",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-21 17:30:10.349589",
+ "modified": "2025-05-22 14:12:13.114705",
  "modified_by": "Administrator",
  "module": "Cal",
  "name": "Cal Schedule",
